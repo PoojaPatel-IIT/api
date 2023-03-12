@@ -1,15 +1,15 @@
 from fastapi import FastAPI
 
-app1 = FastAPI()
+app = FastAPI()
 
 
-@app1.get('/')
-def main():
+@app.get('/')
+def root():
     response = {"data": {"name": "pooja", "person": "learner"}}
     return response
 
 
-@app1.get('/about')
-def main():
+@app.get('/about')
+def about():
     response = {"about": "page"}
     return response
